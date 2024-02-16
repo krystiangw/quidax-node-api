@@ -1,0 +1,25 @@
+{
+  "name": "quidax-node-api",
+  "version": "1.0.0",
+  "description": "The Quidax Node API.",
+  "main": "index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "test": "mocha test/**/*.test.js --timeout 20000 --exit"
+  },
+  "keywords": [
+    "Quidax",
+    "Crypto",
+    "NodeJS",
+    "API"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.1",
+    "mocha": "^10.0.0"
+  }
+}
