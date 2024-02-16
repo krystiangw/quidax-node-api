@@ -20,9 +20,9 @@ describe("Users Collections", () => {
         try {
             const data = await quidax.users.create({
                 "email": "lekan@quidax.com",
-                "first_name": "oye",
-                "last_name": "olalekan",
-                "phone_number": "08087307896"
+                "first_name": "first",
+                "last_name": "last",
+                "phone_number": "00000000000"
             });
             expect(data).to.be.an('object')
             expect(data.status).to.equal("success")
@@ -45,7 +45,7 @@ describe("Users Collections", () => {
 
     it("edit user detail", async () => {
         try {
-            const data = await quidax.users.editAccount(users[0].id, { "first_name": "olalekan", "last_name": "ogunded" },);
+            const data = await quidax.users.editAccount(users[0].id, { "first_name": "last", "last_name": "ogunded" },);
             expect(data).to.be.an('object')
             expect(data.status).to.equal("success")
             expect(data.data).to.be.an('object')
