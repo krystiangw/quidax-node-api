@@ -8,7 +8,7 @@ The Quidax Node library provides an easy access to the Quidax Developer API by [
 Install node-client with npm
 
 ```bash
-  npm i quidax-node
+  npm i quidax-node-api
 ```
 
 ## Documentation
@@ -27,9 +27,9 @@ const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
-const data = quidax.users.create({ 
-    email: 'test@gmail.com', 
-    first_name: 'test', 
+const data = quidax.users.create({
+    email: 'test@gmail.com',
+    first_name: 'test',
     last_name: 'user' ,
     phone_number: '08012345678'
 })
@@ -65,9 +65,9 @@ const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
-const data = quidax.users.editAccount('<user_id>',{ 
-    email: 'test@gmail.com', 
-    first_name: 'test', 
+const data = quidax.users.editAccount('<user_id>',{
+    email: 'test@gmail.com',
+    first_name: 'test',
     last_name: 'user' ,
     phone_number: '08012345678'
 })
@@ -263,7 +263,7 @@ const payload = {
 }
 
 const data = quidax.orders.createBuyOrSellOrder(
-    '<account_id>', 
+    '<account_id>',
     payload
 )
 
@@ -328,7 +328,7 @@ const data = quidax.instantOrder.fetchInstantOrdersDetail('<account_id>', '<inst
 #### Requotes an instant order.
 ```javascript
 const Quidax = require('quidax-node')
- 
+
 const quidax = new Quidax(secretKey)
 
 const data = quidax.instantOrder.requoteInstantOrder('<account_id>', '<instantOrder_id>')
@@ -401,19 +401,19 @@ const Quidax = require('quidax-node')
 const quidax = new Quidax(secretKey)
 
 // Get an estimate how much btc can be bought with the stipulated price.
-const data1 = quidax.quotes.quote({ 
+const data1 = quidax.quotes.quote({
     market: "btcngn",
-    unit: "ngn", 
-    kind: "bid", 
-    total: 2 
+    unit: "ngn",
+    kind: "bid",
+    total: 2
 })
 
 // Get an estimate how much it would cost to buy btc with ngn.
-const data2 = quidax.quotes.quote({ 
-    market: "btcngn", 
-    unit: "btc", 
-    kind: "bid", 
-    volume: 2 
-}) 
+const data2 = quidax.quotes.quote({
+    market: "btcngn",
+    unit: "btc",
+    kind: "bid",
+    volume: 2
+})
 
 ```
